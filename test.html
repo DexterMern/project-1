@@ -1,0 +1,65 @@
+اگر می‌خواهید ساختار HTML را بدون تغییر کلاس‌ها حفظ کنید و از جاوا اسکریپت برای
+افزودن ایتم به صفحه استفاده کنید، می‌توانید یک دستورالعمل جاوا اسکریپت بنویسید.
+در اینجا یک نمونه کد جاوا اسکریپت برای افزودن یک آموزش جدید به فهرست آموزش‌ها
+آورده شده است: ```html
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>Document</title>
+  </head>
+
+  <body dir="rtl">
+    <!-- بخش‌های دیگر -->
+
+    <!-- دکمه افزودن ایتم -->
+    <button onclick="addNewTutorial()">افزودن آموزش جدید</button>
+
+    <script>
+      function addNewTutorial() {
+        var order = document.querySelector(".order");
+
+        // ایجاد عناصر جدید
+        var newShop = document.createElement("div");
+        newShop.classList.add("shop-6");
+
+        var newGallery = document.createElement("div");
+        newGallery.classList.add("gallery-6");
+
+        var newCaption = document.createElement("div");
+        newCaption.classList.add("caption-6");
+        newCaption.textContent = "آموزش کاربردی جدید";
+
+        // اضافه کردن عناصر به ترتیب
+        newShop.appendChild(newGallery);
+        newShop.appendChild(newCaption);
+        order.appendChild(newShop);
+      }
+    </script>
+
+    <!-- بخش‌های دیگر -->
+  </body>
+</html>
+``` این کد، هنگامی که دکمه "افزودن آموزش جدید" فشار داده می‌شود، یک آموزش جدید
+به فهرست آموزش‌ها اضافه می‌کند. این کد را می‌توانید با توجه به نیازهای خود تغییر
+دهید.

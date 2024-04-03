@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>صفحه نظرسنجی</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="computer.ico" type="image/x-icon"/>
+
+  <style>
+    body {
+      font-family: A Chamran;
+      background-image: url("112.png");
+      background-size: 100% auto;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #242424;
+      border-radius: 5px;
+      background-image: url("456.jpeg");
+      color: white;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body dir="rtl">
+  <div class="container">
+    <h2>نظرسنجی </h2>
+    <form>
+      <div class="form-group">
+        <label for="text">آیا از سایت ما راضی هستید ؟</label>
+        <label><input type="radio" name="satisfaction" value="بله"> بله</label>
+        <label><input type="radio" name="satisfaction" value="خیر"> خیر</label>
+      </div>
+      <div class="form-group">
+        <label>رنگ مورد علاقه برای سایت:</label>
+        <input type="color" name="favoriteColor">
+      </div>
+      <label>کیفیت سرورها:</label>
+      <input type="range" name="serverQuality" min="1" max="5" step="1">
+      <div class="form-group">
+        <label>پاسخگویی پشتیبان(09931610436):</label>
+        <input type="range" name="supportResponsiveness" min="1" max="5" step="1">
+      </div>
+      <div class="form-group">
+        <label>نظرات شما:</label>
+        <textarea name="comment" rows="5" style="width: 100%;height: 200px;float: right;"></textarea>
+
+        <button type="submit" class="btn btn-primary">ارسال</button>
+        <button type="reset" class="btn btn-primary">ریست</button>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
